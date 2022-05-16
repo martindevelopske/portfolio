@@ -1,0 +1,18 @@
+export const ServiceData=[
+    {id:1,
+    title:"WEBSITE DESIGN",
+    image:"services/service design.png",
+    description:"a short desc"},
+    {id:2,
+    title:"WEBSITE DEVELOPMENT",
+    image:"services/web dev.jpg",
+    description:"a short desc"},
+    {id:3,
+    title:"DOMAIN HOSTING",
+    image:"services/hosting.png",
+    description:"a short desc"},
+    {id:4,
+    title:"CUSTOMER SUPPORT",
+    image:"services/customer support.png",
+    description:"a short description"},
+]
