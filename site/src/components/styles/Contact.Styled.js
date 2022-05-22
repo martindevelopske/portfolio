@@ -15,7 +15,7 @@ margin:20px;
 }
 @media(max-width:${({theme})=>theme.mobile}){
     width:75%;
-    height:250px;
+    height:auto;
 }
 & .socials{
     width:100%;
@@ -42,6 +42,7 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 @media(max-width:${({theme})=>theme.mobile}){
     width:75%;
+    height:auto;
     & button{
         width:40%;
     }
@@ -58,6 +59,7 @@ display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:space-evenly;
+height:auto;
 @media(max-width:${({theme})=>theme.mobile}){
     flex-direction:column;
 }`

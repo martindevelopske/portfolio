@@ -9,8 +9,8 @@ flex-direction: ${({FD})=>FD || 'row'};
 flex-wrap: ${({flexWrap})=>flexWrap || 'wrap'};
 justify-content: center;
 align-items: center;
-height:${({height})=>height || '560px'}
-
+height:${({height})=>height || '560px'};
+border-bottom:${({BB})=>BB ||'none'}
 `
 export const Container2=styled.div`
 width:100%;

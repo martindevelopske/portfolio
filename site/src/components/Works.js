@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Container2, StyledHeader } from './styles/Body.Styled'
-import { StyledProjectsHolder } from './styles/projects.Styled';
+import { ProjectContainer, StyledProjectsHolder } from './styles/projects.Styled';
 import {projects} from './ProjectsData'
 import Button from './styles/Button.Styled';
 import { Link } from 'react-router-dom';
-import {FaArrowAltCircleLeft,FaArrowAltCircleRight} from 'react-icons/fa'
+
+import{TiArrowLeftOutline,TiArrowRightOutline} from 'react-icons/ti'
 function Works() {
   const [current,setCurrent]=useState(1);
   const length=projects.length
@@ -18,11 +19,13 @@ function Works() {
   }
   return (
     <Container2 FD='column'>
-      <StyledHeader>projects</StyledHeader>
+      <StyledHeader>my projects</StyledHeader>
+      <ProjectContainer FD='row'>
+      <TiArrowLeftOutline className="prev" onClick={prevSlide}/>
       <StyledProjectsHolder>
-        <FaArrowAltCircleLeft className="prev" onClick={prevSlide}/>
+    
         {projects.map((project)=>{
-          const {id,img,description,link}=project;
+          const {id,img,description,link,technologies,github}=project;
           return(
             <div key={id} >
             {id===current?
@@ -30,12 +33,18 @@ function Works() {
                         <img src={img} alt=''></img>
                         <div>
                         <p>{description}</p>
+                        <p>technologies used: {technologies}</p>
+                        <span>
                         <Link to={link}>
                         <Button>view project</Button>
                         </Link>
-                        </div> 
+                        <Link to={github}>
+                        <Button BG="transparent" color='#fff'>github repo</Button>
+                        </Link>
+                        </span>
                         
-                        
+                        </div>
+                                
                       </div>
             :null}
 
@@ -43,9 +52,12 @@ function Works() {
             
           )
         })}
-        <FaArrowAltCircleRight className="next" onClick={nextSlide}/>
+        
         
       </StyledProjectsHolder>
+      <TiArrowRightOutline className="next" onClick={nextSlide}/>
+      </ProjectContainer>
+      
     </Container2>
   )
 }

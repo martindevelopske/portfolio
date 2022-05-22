@@ -10,7 +10,7 @@ function Contact() {
   return (
     <>
      
-    <Container2  MT='60px' FD='column'>
+    <Container  MT='60px' FD='column' height='auto'>
     <StyledHeader>CONTACT ME</StyledHeader>
     <StyledContactmain>
     <div>
@@ -44,7 +44,7 @@ function Contact() {
        
     </StyledContactmain>
     
-    </Container2>
+    </Container>
     </>
   )
 }

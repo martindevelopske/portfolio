@@ -7,9 +7,26 @@ import {BsFillArrowUpRightCircleFill} from 'react-icons/bs'
 const days=['sun','mon','tue','wed','thur','fri','sat']
 const date=new Date().getDate();
 const day=days[new Date().getDay()];
+
+
+
 //date.style={'font-size':'3em'}
 function Intro() {
-  const [button,setButton]=useState(true);
+  
+    const dateToday= new Date()
+    let addZeroes=(num)=>{
+      return num<10?`0${num}` :num;
+    }
+    let hr=addZeroes(dateToday.getHours())
+    let min=addZeroes(dateToday.getMinutes())
+    let secs=addZeroes(dateToday.getSeconds())
+  
+    let time=`${hr}:${min}:${secs}`
+    console.log(time);
+     
+  
+  
+  
   const [count,setCount]=useState(0);
   const alert=()=>{
     setCount(count+1);
@@ -22,7 +39,7 @@ function Intro() {
         <h3>websites done right!</h3>
         <span>
           <Link to='/works'>
-            <Button>see works <BsFillArrowUpRightCircleFill style={{fontSize:"1.5em"}}/></Button>
+            <Button BG='transparent' color='#fff'>see works <BsFillArrowUpRightCircleFill style={{fontSize:"1.5em"}}/></Button>
           </Link>
          <Link to='/contact'>
          <Button onClick={alert}> hire me</Button>
@@ -31,7 +48,7 @@ function Intro() {
         </span>
         <StyledDateContainer>
           <div><big>{date}</big> <i>{day}</i> </div>
-          
+          {time}
           <div>
             <Socials />
           </div>

@@ -7,6 +7,8 @@ import AboutPage from './components/pages/AboutPage'
 import Home from './components/pages/Home'
 import WorksPage from './components/pages/WorksPage'
 import ContactPage from './components/pages/ContactPage'
+//css 
+import './App.css'
 const theme={
   mobile:'768px'
 }

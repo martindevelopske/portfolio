@@ -11,3 +11,18 @@ p{
     font-weight: 500;
     color:white;
 }
+.next{
+    font-size: 1.6em;
+    color:#fff;
+    
+}
+.prev{
+    font-size: 1.6em;
+    margin-left: 2px;
+}
+.containerCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

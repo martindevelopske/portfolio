@@ -30,6 +30,10 @@ justify-content:space-between;
 & a{
     text-decoration:none;
     color:#fff;
+
+}
+& a:hover{
+    color:lightblue;
 };
 & li{
     
