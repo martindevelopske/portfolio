@@ -47,8 +47,8 @@ function Intro() {
         
         </span>
         <StyledDateContainer>
-          <div><big>{date}</big> <i>{day}</i> </div>
-          {time}
+          <div><big>{date}</big> <i>{day}   {time}</i> </div>
+          
           <div>
             <Socials />
           </div>

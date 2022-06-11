@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StyledSkillCard } from './styles/Body.Styled'
+import { StyledSkillCard } from './styles/skills.styled'
 
 function SkillElement({Image,Text}) {
   return (

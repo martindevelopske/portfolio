@@ -1,7 +1,8 @@
 import React from 'react';
 import SkillElement from './SkillElement';
 import SkillsData from './SkillsData';
-import { Container, Container2,StyledSkillsHolder, StyledHeader, StyledSkillContainer } from './styles/Body.Styled';
+import { Container, Container2,StyledHeader} from './styles/Body.Styled'
+import {StyledSkillsHolder, StyledSkillContainer } from './styles/skills.styled';
 
 function Skills({skillsData}){
 
