@@ -27,5 +27,9 @@ align-items:center;
 & h5{
 margin-top:0px;
 align-self:center;
+@media (max-widht:410px){
+    width:60px;
+    heigh:60Px;
+}
 }
 `

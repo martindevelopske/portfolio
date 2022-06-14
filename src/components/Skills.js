@@ -10,7 +10,7 @@ function Skills({skillsData}){
         <>
         
         <Container FD='column'>
-        <StyledHeader>my skills and Knowledge</StyledHeader>
+        my skills and knowledge
         <StyledSkillsHolder>
         {SkillsData.map((skill)=>{
             const{logo,text,id}=skill;
