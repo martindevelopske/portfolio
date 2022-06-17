@@ -21,7 +21,7 @@ color: ${({color})=>color|| "#000"};
     transform: scale(0.98);
 };
 @media(max-width:${({theme})=>theme.mobile}){
-    padding: 10px 40px;
+    padding: 10px 30px;
 }`
 
 export default Button;

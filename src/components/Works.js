@@ -5,7 +5,8 @@ import { projects } from './ProjectsData'
 import {  Container2 } from './styles/Body.Styled'
 import Button from './styles/Button.Styled'
 import { ProjectsCard } from './styles/projects.Styled'
-
+import {BsBoxArrowUpRight} from 'react-icons/bs'
+import {AiOutlineGithub} from 'react-icons/ai'
 function Works() {
   return (
     <>
@@ -24,10 +25,10 @@ function Works() {
           <div>
             <span>
               <Link to={link}>
-              <Button BG="transparent" color="#fff">view site</Button>
+              <Button BG="transparent" color="#fff">view site {<BsBoxArrowUpRight />}</Button>
               </Link>
               <Link to={github}>
-              <Button > github</Button>
+              <Button > github {<AiOutlineGithub />}</Button>
               </Link>
             </span>
           </div>
