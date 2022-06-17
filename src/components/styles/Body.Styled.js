@@ -9,6 +9,7 @@ flex-direction: ${({FD})=>FD || 'row'};
 flex-wrap: ${({flexWrap})=>flexWrap || 'wrap'};
 justify-content: center;
 align-items: center;
+gap:${({gap})=>gap} || "0";
 height:${({height})=>height || '560px'};
 border-bottom:${({BB})=>BB ||'none'}
 `
