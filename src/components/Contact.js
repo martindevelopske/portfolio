@@ -1,12 +1,23 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import Button from './styles/Button.Styled'
 import {RiWhatsappFill} from 'react-icons/ri'
-// css
+import emailjs from '@emailjs/browser'
 
 import Socials from './Socials'
-import { Container, Container2, StyledHeader } from './styles/Body.Styled'
+import { Container,StyledHeader } from './styles/Body.Styled'
 import { StyledContactCard, StyledContactContainer, StyledContactForm, StyledContactmain } from './styles/Contact.Styled'
 function Contact() {
+  const form =useRef()
+  const sendEmail=(e)=>{
+    e.preventDefault();
+    emailjs.sendForm('service_n47248d', 'template_erynu56', form.current, 'zRkkjL78ryGhy2pvo')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      form.current.reset()
+  }
   return (
     <>
      
@@ -21,10 +32,13 @@ function Contact() {
 
             <StyledContactForm>
               <p>please fill in the form below and i'll get back to you as soon as possible</p>
-              <input type="text" placeholder='your Name'></input>
-              <input type="email" placeholder='your Email'></input>
-              <input className="msgbox" type="text" placeholder="Message"></input>
-              <Button>send</Button>
+              <form ref={form}>
+              <input type="text" placeholder='your Name' name="name"></input>
+              <input type="email" placeholder='your Email' name='email'></input>
+              <input className="msgbox" type="text" placeholder="Message" name='message'></input>
+              <Button onClick={sendEmail} type="submit">send</Button>
+              </form>
+             
             </StyledContactForm>
             <StyledContactCard>
               <div>TEL: +254111943094</div>
